@@ -5,6 +5,7 @@ const graphContainer = document.getElementById("graph-container");
 const gitgraph = GitgraphJS.createGitgraph(graphContainer, {
   author: "Ben de Tester <Ben.de.Tester@cfit.nl>",
   commitMessage: "nieuwe versie",
+  orientation: "vertical-reverse",
   template: GitgraphJS.templateExtend("metro", {
     colors: [
       "#00aac8",
@@ -23,7 +24,7 @@ const gitgraph = GitgraphJS.createGitgraph(graphContainer, {
 });
 
 const main = gitgraph.branch("main");
-main.commit("cfit.co.uk master script ").tag("v0.1");
+main.commit("cfit.co.uk master script ");
 
 const develop = main.branch("develop");
 develop.commit("toevoegen contactpagina");
@@ -37,4 +38,4 @@ aFeature
 develop.merge(aFeature);
 develop.commit("chatbot op contactpagina toegevoegd");
 
-main.merge(develop).tag("v1.0");
+main.merge(develop);

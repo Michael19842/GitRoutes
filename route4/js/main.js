@@ -5,6 +5,7 @@ const graphContainer = document.getElementById("graph-container");
 const gitgraph = GitgraphJS.createGitgraph(graphContainer, {
   author: "Ben de Tester <Ben.de.Tester@cfit.nl>",
   commitMessage: "nieuwe versie",
+  orientation: "vertical-reverse",
   template: GitgraphJS.templateExtend("metro", {
     colors: [
       "#00aac8",

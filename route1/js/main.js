@@ -5,6 +5,7 @@ const graphContainer = document.getElementById("graph-container");
 const gitgraph = GitgraphJS.createGitgraph(graphContainer, {
   author: "Ben de Tester <Ben.de.Tester@cfit.nl>",
   commitMessage: "nieuwe versie",
+  orientation: "vertical-reverse",
   template: GitgraphJS.templateExtend("metro", {
     colors: [
       "#00aac8",
@@ -23,7 +24,7 @@ const gitgraph = GitgraphJS.createGitgraph(graphContainer, {
 });
 
 const master = gitgraph.branch("master");
-master.commit("cfit.co.uk eerste versie").tag("v0.0.1");
+master.commit("cfit.co.uk eerste versie");
 
 master.commit().commit("voorbereiding move naar main branch");
 
